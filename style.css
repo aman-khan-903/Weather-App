@@ -1,0 +1,225 @@
+
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.form-container.active{
+    scale: 1;
+    opacity: 1;
+    display: flex;
+}
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.tab-container{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.weather-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem;
+}
+
+.btn{
+    all: unset;
+    font-size: 0.85rem; 
+    text-transform: uppercase;
+    background-color: var(--colorDark2);
+    border-radius: 5px ;
+    /* color: white; */
+    border:none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+    display: flex;
+    height: 250px;
+    width:400px;
+    margin-top: -35px;
+    justify-content: space-around;
+}
+
+.loading-container{
+    display: none;
+}
+.loading-container.active {
+    display: flex;
+}
+.loading-container p {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.parameter-container{
+    width:90%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.parameter{
+    height: 130px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(105, 112, 127);
+    border-radius: 5px;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 550;
+    margin-top: 20px;
+}
+
+.parameter img{
+    height: 45px;
+    width: 45px;
+}
+
+.name{
+    display: flex;
+    gap: 20px;
+    font-size: 20px ; 
+    letter-spacing: 1px;
+}
+
+.name img{
+    height: 20px;
+}
+
+.user-info-container{
+    display: none;
+}
+
+.user-info-container.active{
+    display: flex;
+    gap: 25px;
+    font-weight: 600;
+}
+
+.wdesc{
+    font-size: 19px;
+    font-weight: 600;
+}
+.wimage{
+    outline: none;
+    height: 60px;
+    width: 60px;
+}
+.wtemp{
+    font-size: 30px;
+}
+
+
+.form-container{
+    display: none;
+}
+
+.form-container.active{
+    margin-top: -30px;
+    margin-bottom: 25px;
+    height: 40px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-container input{
+    all:unset;
+    width: calc(100% - 80px);
+    height:40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+.form-container input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.form-container .btn{
+    padding:unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom:1px;
+}
+
+@media only screen and (max-width: 500px) {
+    .parameter-container{
+        width:90%;
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+    }
+}
